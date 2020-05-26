@@ -14,7 +14,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class HttpClientsUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HttpClientsUtil.class);
 
-    public static String post(String url, Map<String,String> map) throws ParseException, IOException{
+    public static String post(String url, Map<String, String> map) throws ParseException, IOException {
         String body = "";
         System.out.println(url);
 
@@ -42,9 +41,9 @@ public class HttpClientsUtil {
 
         //装填参数
         List<NameValuePair> nameValuePairs = new ArrayList<>();
-        if(map!=null){
+        if (map != null) {
             for (Map.Entry<String, String> entry : map.entrySet()) {
-                if(null!=entry.getValue()){
+                if (null != entry.getValue()) {
                     nameValuePairs.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
                 }
             }
