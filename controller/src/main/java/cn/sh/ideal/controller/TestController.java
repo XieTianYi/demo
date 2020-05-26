@@ -56,7 +56,7 @@ public class TestController {
         return encoderByMd5(str).toUpperCase();
     }
 
-    public static String encoderByMd5(String str){
+    public static String encoderByMd5(String str) {
         try {
             // 生成一个MD5加密计算摘要
             MessageDigest md = MessageDigest.getInstance("MD5");
