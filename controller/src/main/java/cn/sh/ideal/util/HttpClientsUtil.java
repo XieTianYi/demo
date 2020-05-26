@@ -12,8 +12,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,14 +25,10 @@ import java.util.Map;
  */
 public class HttpClientsUtil {
 
-    private static final CloseableHttpClient httpclient = HttpClients.createDefault();
     private static HttpClientContext context = HttpClientContext.create();
-
-    private static final Logger log = LoggerFactory.getLogger(HttpClientsUtil.class);
 
     public static String post(String url, Map<String, String> map) throws ParseException, IOException {
         String body = "";
-        System.out.println(url);
 
         //创建post方式请求对象
         HttpPost httpPost = new HttpPost(url);
