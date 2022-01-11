@@ -1,0 +1,10 @@
+{   
+   "description": "Tim NFT",
+   "image": "https://raw.githubusercontent.com/XieTianYi/demo/master/web/src/main/resources/static/test.jpg",
+   "name": "Tim_NFT",
+   "attributes": [
+       { "trait_type": "Base", "value": "Starfish" },      
+       { "trait_type": "Eyes", "value": "Big" },      
+       { "trait_type": "Mouth","value": "Surprised" }
+   ]
+}
